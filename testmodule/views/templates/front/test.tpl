@@ -1,5 +1,4 @@
-<?php
-/**
+{*
 * 2007-2015 PrestaShop
 *
 * NOTICE OF LICENSE
@@ -22,17 +21,26 @@
 *  @copyright 2007-2015 PrestaShop SA
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
-*/
+*}
 
-$sql = array();
+<div class="panel">
+	<h3><i class="icon icon-credit-card"></i> {l s='testmodule' mod='testmodule'}</h3>
+	<p>
+		<h1>Tutorial Module</h1>
+	</p>
+	<br />
+	<p>
+		{l s='This module will boost your sales!' mod='testmodule'}
+	</p>
+</div>
 
-$sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'testmodule` (
-    `id_testmodule` int(11) NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY  (`id_testmodule`)
-) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;';
-
-foreach ($sql as $query) {
-    if (Db::getInstance()->execute($query) == false) {
-        return false;
-    }
-}
+<div class="panel">
+	<h3><i class="icon icon-tags"></i> {l s='Documentation' mod='testmodule'}</h3>
+	<p>
+		&raquo; {l s='You can get a PDF documentation to configure this module' mod='testmodule'} :
+		<ul>
+			<li><a href="#" target="_blank">{l s='English' mod='testmodule'}</a></li>
+			<li><a href="#" target="_blank">{l s='French' mod='testmodule'}</a></li>
+		</ul>
+	</p>
+</div>

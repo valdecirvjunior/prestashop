@@ -88,7 +88,8 @@ class Testmodule extends Module
 
         $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
-        return $output.$this->renderForm();
+        //return $output.$this->renderForm();
+        return $this->display(__FILE__,'test.tpl');
     }
 
     /**
@@ -218,5 +219,6 @@ class Testmodule extends Module
     public function hookDisplayHomeTabContent()
     {
         /* Place your code here. */
+        return $this->display(__FILE__,'test.tpl');
     }
 }
